@@ -1,6 +1,5 @@
 # 💪 FitTrack - Your Personal Workout Companion
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 A powerful, intuitive workout tracking application built with the MERN stack. FitTrack helps you maintain consistency in your fitness journey by providing comprehensive workout tracking, goal setting, and progress visualization.
