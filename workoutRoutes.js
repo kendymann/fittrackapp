@@ -42,26 +42,65 @@ router.get('/:id', async (req, res) => {
 
 // POST a new workout
 router.post('/', async (req, res) => {
-    const {title, load, reps} = req.body
+    const { title, type, load, reps, sets, duration, distance, pace, notes, difficulty } = req.body
 
     let emptyFields = []
 
+    // Universal validation - every workout needs these
     if (!title) {
       emptyFields.push('title')
     }
-    if (!load) {
-      emptyFields.push('load')
+    if (!type) {
+      emptyFields.push('type')
     }
-    if (!reps) {
-      emptyFields.push('reps')
+
+    // Type-specific validation based on workout type
+    if (type === 'strength') {
+      // Strength workouts need: sets, reps, load (like Hevy)
+      if (!sets) emptyFields.push('sets')
+      if (!reps) emptyFields.push('reps')  
+      if (!load) emptyFields.push('load')
+    } 
+    else if (type === 'cardio') {
+      // Cardio workouts need: duration, distance (like Strava)
+      if (!duration) emptyFields.push('duration')
+      if (!distance) emptyFields.push('distance')
     }
+    else if (type === 'sport') {
+      // Sport workouts need: duration (basketball, soccer, etc.)
+      if (!duration) emptyFields.push('duration')
+    }
+    else {
+      // Invalid workout type
+      return res.status(400).json({ error: 'Invalid workout type. Must be: strength, cardio, or sport' })
+    }
+
     if (emptyFields.length > 0) {
-      return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
+      return res.status(400).json({ 
+        error: 'Please fill in all required fields', 
+        emptyFields,
+        hint: `For ${type} workouts, you need: ${emptyFields.join(', ')}`
+      })
     }
 
     try {
       const user_id = req.user._id
-      const workout = await Workout.create({title, load, reps, user_id})
+      
+      // Create workout with all possible fields (MongoDB ignores undefined ones)
+      const workout = await Workout.create({
+        title, 
+        type, 
+        load, 
+        reps, 
+        sets, 
+        duration, 
+        distance, 
+        pace, 
+        notes, 
+        difficulty, 
+        user_id
+      })
+      
       res.status(200).json(workout)
     } catch (error) {
       res.status(400).json({error: error.message})
