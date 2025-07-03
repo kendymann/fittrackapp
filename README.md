@@ -81,8 +81,6 @@ Set up your `.env` file with MongoDB connection string and JWT secret. The app r
 
 ---
 
-*This is a personal project born out of frustration with existing fitness apps. I'm building it for myself first, then for others who have the same problem.*
-
 ### Prerequisites
 - Node.js
 - MongoDB
@@ -126,13 +124,7 @@ npm run server
 
 ## Contributing
 
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Hit me up @ jaydentruongcrt@gmail.com if you are interested in helping.
 
 ## Acknowledgments
 
