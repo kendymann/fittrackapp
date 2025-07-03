@@ -1,53 +1,87 @@
-# 💪 FitTrack - Your Personal Workout Companion
+# FitTrack - Unified Fitness Tracking
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+## The Problem I'm Solving
 
-A powerful, intuitive workout tracking application built with the MERN stack. FitTrack helps you maintain consistency in your fitness journey by providing comprehensive workout tracking, goal setting, and progress visualization.
+I'm tired of juggling multiple apps for my fitness tracking. Hevy for weightlifting, Strava for running and cycling, random apps for sports. It's messy, my data is scattered, and I can't see my complete fitness picture in one place.
 
-![FitTrack Demo](path/to/demo.gif)
+I want one app that handles everything - strength training with proper set/rep tracking, cardio with distance and pace, and sports activities with duration. Most importantly, I want to group different activities into workout sessions because that's how I actually train.
 
-## ✨ Key Features
+## What I'm Building
 
-- **🔐 Secure Authentication**
-  - JWT-based user authentication
-  - Password encryption
-  - Protected routes
-  - Session management
+A unified fitness platform that combines the best of Hevy and Strava into one clean interface. No unnessecary features, just what I actually need:
 
-- **📝 Workout Management**
-  - Create custom workout routines
-  - Track sets, reps, and weights
-  - Log cardio sessions
-  - Add notes and ratings
-  - Timer functionality
+- Session-based workout tracking (group multiple activities together)
+- Proper strength training logs with sets, reps, and weight
+- Cardio tracking with distance, pace, and duration
+- Sports activity logging
+- Dark mode because my eyes hurt
 
-- **📊 Progress Analytics**
-  - Visual progress tracking
-  - Weight progression charts
-  - Personal records tracking
-  - Performance insights
-  - Export workout data
+## What's Next
 
-- **🎯 Goal Setting**
-  - Set weekly/monthly targets
-  - Track completion rates
-  - Milestone celebrations
-  - Custom goal categories
+Once I validate this MVP works for my daily use, I'll expand with:
+- Analytics and progress tracking
+- Social features and workout sharing
+- Communities with challenges
+- Exercise database and suggestions
+- Mobile app (React Native or Flutter)
+- Advanced metrics and insights
 
-## 🛠️ Tech Stack
+This README will get proper documentation, screenshots, and setup instructions once the core features are solid. Right now I'm focused on building something I actually want to use every day.
 
-### Core MERN Stack
-- **MongoDB** - Database
-- **Express.js** - Backend framework
-- **React.js** - Frontend library
-- **Node.js** - Runtime environment
+## Current Status
 
-### Development & Testing
-- **Postman** - API testing and documentation
-- **MongoDB Atlas** - Cloud database service
-- **Git** - Version control
+This is my MVP. I'm actively using it to track my workouts while building it. The core functionality works:
 
-## 🚀 Getting Started
+- User authentication and profiles
+- Create workout sessions with multiple exercises
+- Track strength, cardio, and sport activities
+- View workout history and basic stats
+- Unit system toggle (miles/km, min/mile vs min/km)
+- Full dark/light mode support
+- Responsive design that works on mobile
+
+## Tech Stack
+
+**Backend:**
+- Node.js with Express
+- MongoDB with Mongoose
+- JWT authentication
+- Bcrypt for password hashing
+
+**Frontend:**
+- Next.js 15 with React 19
+- TypeScript for type safety
+- Tailwind CSS v4 for styling
+- React Hook Form with Yup validation
+- Axios for API calls
+
+## Why I Built This
+
+I got fed up switching between apps mid-workout. I'd start with Hevy for bench press, switch to Strava for a run, then use some other app for basketball. My workout data was fragmented and I couldn't see patterns across different activity types.
+
+This app treats a workout session as a collection of activities, which matches how I actually train. I might do strength training followed by cardio, or mix sports with some accessory work. Now I can log everything in one session and see my complete fitness picture.
+
+## Running the App
+
+Backend:
+```bash
+cd fittrackapp
+npm install
+npm start
+```
+
+Frontend:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Set up your `.env` file with MongoDB connection string and JWT secret. The app runs on localhost:3000 (frontend) and localhost:5000 (backend).
+
+---
+
+*This is a personal project born out of frustration with existing fitness apps. I'm building it for myself first, then for others who have the same problem.*
 
 ### Prerequisites
 - Node.js
@@ -82,7 +116,7 @@ npm run server
 # Run frontend (from client directory)
 npm run server
 
-## 📱 Usage
+## Usage
 
 1. Register an account or login
 2. Create your first workout routine
@@ -90,7 +124,7 @@ npm run server
 4. Track your progress through the dashboard
 5. Set and monitor fitness goals
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -100,7 +134,7 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [React Documentation](https://reactjs.org/)
 - [MongoDB Documentation](https://docs.mongodb.com/)
@@ -109,4 +143,4 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-<p align="center">Made with ❤️ by Kendymann</p>
+
