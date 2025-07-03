@@ -19,7 +19,13 @@ router.post('/login', async (req, res) => {
     // create a token
     const token = createToken(user._id)
 
-    res.status(200).json({email, token})
+    res.status(200).json({
+      token, 
+      user: {
+        _id: user._id,
+        email: user.email
+      }
+    })
   } catch (error) {
     res.status(400).json({error: error.message})
   }
@@ -35,7 +41,13 @@ router.post('/signup', async (req, res) => {
     // create a token
     const token = createToken(user._id)
 
-    res.status(200).json({email, token})
+    res.status(200).json({
+      token, 
+      user: {
+        _id: user._id,
+        email: user.email
+      }
+    })
   } catch (error) {
     res.status(400).json({error: error.message})
   }

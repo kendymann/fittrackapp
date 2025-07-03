@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const workoutRoutes = require('./workoutRoutes')
+const workoutSessionRoutes = require('./workoutSessionRoutes')
 const userRoutes = require('./user')
 
 // express app
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/workouts', workoutRoutes)
+app.use('/api/workout-sessions', workoutSessionRoutes)
 app.use('/api/users', userRoutes)
 
 app.get('/', (req, res) => {
