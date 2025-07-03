@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/workouts', workoutRoutes)
-app.use('/api/user', userRoutes)
+app.use('/api/users', userRoutes)
 
 app.get('/', (req, res) => {
   res.json({mssg: 'Welcome to the app'})
