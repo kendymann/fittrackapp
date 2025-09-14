@@ -1,4 +1,4 @@
-# FitTrack - Unified Fitness Tracking
+# Makra [Mack-Crah] - Unified Fitness Tracking
 
 ## The Problem I'm Solving
 
