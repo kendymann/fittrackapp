@@ -6,6 +6,9 @@ const User = require('./userModel')
 const router = express.Router()
 
 const createToken = (_id) => {
+  if (!process.env.JWT_SECRET) {
+    throw new Error('JWT secret not configured')
+  }
   return jwt.sign({_id}, process.env.JWT_SECRET, { expiresIn: '3d' })
 }
 
