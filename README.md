@@ -41,13 +41,13 @@ This is my MVP. I'm actively using it to track my workouts while building it. Th
 - Responsive design that works on mobile
 
 **The current landing page**
-![landing page](MakradashboardExample.png)
+![landing page](MakralandingpageExample.png)
 
 **The current dashboard light and dark modes**
 ![dashboard dark](Makradashboardexample.png)
 ![dashboard light](lightMakradashboardexample.png)
 *personally don't like the design of the dashboards want to get more opinions though*
-Analytics and the Social feed is still in progress
+</br>Analytics and the Social feed is still in progress
 
 **Login and Register Pages**
 ![register page](makraregisterpage.png)
