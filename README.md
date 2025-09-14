@@ -1,4 +1,4 @@
-# Makra [Mack-Crah] - Unified Fitness Tracking
+# Makra - Unified Fitness Tracking
 
 ## The Problem I'm Solving
 
@@ -40,6 +40,19 @@ This is my MVP. I'm actively using it to track my workouts while building it. Th
 - Full dark/light mode support
 - Responsive design that works on mobile
 
+**The current landing page**
+!(landing page)[MakradashboardExample.png]
+
+**The current dashboard light and dark modes**
+!(dashboard dark)[Makradashboardexample.png]
+!(dashboard light)[lightMakradashboardexample.png]
+*personally don't like the design of the dashboards want to get more opinions though*
+Analytics and the Social feed is still in progress
+
+**Login and Register Pages**
+!(register page)[makraregisterpage.png]
+!(login page)[Makrasigninpage.png]
+
 ## Tech Stack
 
 **Backend:**
@@ -54,12 +67,6 @@ This is my MVP. I'm actively using it to track my workouts while building it. Th
 - Tailwind CSS v4 for styling
 - React Hook Form with Yup validation
 - Axios for API calls
-
-## Why I Built This
-
-I got fed up switching between apps mid-workout. I'd start with Hevy for bench press, switch to Strava for a run, then use some other app for basketball. My workout data was fragmented and I couldn't see patterns across different activity types.
-
-This app treats a workout session as a collection of activities, which matches how I actually train. I might do strength training followed by cardio, or mix sports with some accessory work. Now I can log everything in one session and see my complete fitness picture.
 
 ## Running the App
 
